@@ -13,7 +13,7 @@ builder.Services.AddAWSService<IAmazonSQS>();
 builder.Services.AddScoped<IEventPublisher, EventPublisher>();
 builder.Services.AddHostedService<MotorcycleRegisteredConsumer>();
 
-// Aqui pode adicionar outras dependências, como DB, MediatR, repositórios, etc.
+builder.Services.AddScoped<INotificationEventRepository, NotificationEventRepository>();
 
 var app = builder.Build();
 
