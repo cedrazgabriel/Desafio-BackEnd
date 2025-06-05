@@ -18,4 +18,6 @@ public readonly struct LicensePlate
     }
 
     public override string ToString() => Value;
+
+
 }

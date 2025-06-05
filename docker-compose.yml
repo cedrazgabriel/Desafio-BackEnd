@@ -1,17 +1,5 @@
-services:
-  rentalservice-api:
-    build:
-      context: ./RentalService.API
-      dockerfile: ../Dockerfile
-    container_name: rentalservice-api
-    ports:
-      - "5000:80"
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ConnectionStrings__DefaultConnection=Host=rental-postgres;Database=rental_db;Username=rental;Password=rental123
-    depends_on:
-      - rental-postgres
 
+services:
   rental-postgres:
     image: postgres:15
     container_name: rental-postgres

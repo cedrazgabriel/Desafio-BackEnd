@@ -1,8 +1,17 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <PackageReference Include="AWSSDK.SQS" Version="4.0.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="9.0.5" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\RentalService.Application\RentalService.Application.csproj" />
     <ProjectReference Include="..\RentalService.Domain\RentalService.Domain.csproj" />
+    <ProjectReference Include="..\RentalService.IntegrationEvents\RentalService.IntegrationEvents.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
